@@ -1,0 +1,102 @@
+name: ND4_GRSF1
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 800
+Peak Prominence Minimum: 500
+avg height: 1288.5569914621133
+avg_width: 9.926611208299043
+avg_prominence: 987.5345213447171
+total_peaks: 1874
+avg peaks per image: 187.4
+name: ND4_GRSF1
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 21817.81733231293
+avg_width: 7.412244163207939
+avg_prominence: 16327.612106462584
+total_peaks: 2940
+avg peaks per image: 294.0
+name: ND4_GRSF1
+Channel: Channel_3
+Peak Width Minimum: 3
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 5000
+avg height: 10654.360750619322
+avg_width: 7.032053048137897
+avg_prominence: 9828.816178364988
+total_peaks: 1211
+avg peaks per image: 121.1
+c1_max: 3540.85
+c2_max: 65535.0
+c3_max: 48298.188
+total line scans: 6261
+name: RNR2_GRSF1
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 4000
+Peak Prominence Minimum: 1000
+avg height: 7458.952456690259
+avg_width: 11.34379609736273
+avg_prominence: 3575.791051567241
+total_peaks: 2967
+avg peaks per image: 329.6666666666667
+name: RNR2_GRSF1
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 19884.250100567988
+avg_width: 7.465063509284131
+avg_prominence: 15094.677219846313
+total_peaks: 2993
+avg peaks per image: 332.55555555555554
+name: RNR2_GRSF1
+Channel: Channel_3
+Peak Width Minimum: 3
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 5000
+avg height: 12168.710612068964
+avg_width: 6.963670409024292
+avg_prominence: 11271.629653017244
+total_peaks: 1392
+avg peaks per image: 154.66666666666666
+c1_max: 23607.654
+c2_max: 65535.0
+c3_max: 52664.02
+total line scans: 7398
+name: tRNAs_GRSF1
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 300
+avg height: 1730.4371467696633
+avg_width: 11.050016731426519
+avg_prominence: 748.8674171348315
+total_peaks: 1424
+avg peaks per image: 142.4
+name: tRNAs_GRSF1
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 20522.147478466075
+avg_width: 7.640942461093799
+avg_prominence: 14973.214271386429
+total_peaks: 1695
+avg peaks per image: 169.5
+name: tRNAs_GRSF1
+Channel: Channel_3
+Peak Width Minimum: 3
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 5000
+avg height: 13495.411870588232
+avg_width: 6.812562444274742
+avg_prominence: 12295.646843137252
+total_peaks: 1020
+avg peaks per image: 102.0
+c1_max: 10413.36
+c2_max: 65535.0
+c3_max: 49855.0
+total line scans: 3897

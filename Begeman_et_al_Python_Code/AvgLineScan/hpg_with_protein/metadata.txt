@@ -1,0 +1,72 @@
+name: GRSF1
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 1297
+Peak Prominence Minimum: 200
+avg height: 2415.19737590157
+avg_width: 9.673790265655693
+avg_prominence: 873.1853466270685
+total_peaks: 2357
+avg peaks per image: 294.625
+name: GRSF1
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 27881.609175785805
+avg_width: 7.221377399198061
+avg_prominence: 21180.535610787738
+total_peaks: 2577
+avg peaks per image: 322.125
+c1_max: 5708.5
+c2_max: 65535.0
+c3_max: 0
+total line scans: 3558
+name: MRPL23
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 1297
+Peak Prominence Minimum: 200
+avg height: 2781.7705396435153
+avg_width: 9.64528281141349
+avg_prominence: 999.1817240319609
+total_peaks: 4881
+avg peaks per image: 488.1
+name: MRPL23
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 800
+avg height: 2672.688112401185
+avg_width: 7.035747907178256
+avg_prominence: 2257.104094367589
+total_peaks: 4048
+avg peaks per image: 404.8
+c1_max: 8426.546
+c2_max: 10822.65
+c3_max: 0
+total line scans: 6738
+name: TFAM
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 1297
+Peak Prominence Minimum: 200
+avg height: 2134.96717319325
+avg_width: 9.85126044268287
+avg_prominence: 785.1269245463232
+total_peaks: 3141
+avg peaks per image: 392.625
+name: TFAM
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 5000
+avg height: 16880.84734388285
+avg_width: 8.333386117549107
+avg_prominence: 13686.933955125172
+total_peaks: 2117
+avg peaks per image: 264.625
+c1_max: 5283.5
+c2_max: 65535.0
+c3_max: 0
+total line scans: 5036

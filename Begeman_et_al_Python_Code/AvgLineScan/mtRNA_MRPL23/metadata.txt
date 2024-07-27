@@ -1,0 +1,72 @@
+name: ND4_MRPL23
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 200
+Peak Prominence Minimum: 100
+avg height: 512.8300798252582
+avg_width: 8.711416146106805
+avg_prominence: 370.6145428911836
+total_peaks: 2518
+avg peaks per image: 251.8
+name: ND4_MRPL23
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 800
+avg height: 2658.6053855932205
+avg_width: 6.293503699801485
+avg_prominence: 2455.421686440678
+total_peaks: 944
+avg peaks per image: 94.4
+c1_max: 2233.862
+c2_max: 11078.08
+c3_max: 0
+total line scans: 4614
+name: RNR2_MRPL23
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 2000
+Peak Prominence Minimum: 1000
+avg height: 3528.172368301545
+avg_width: 11.261759242915979
+avg_prominence: 2020.9178224341508
+total_peaks: 2202
+avg peaks per image: 220.2
+name: RNR2_MRPL23
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 800
+avg height: 3281.632966445916
+avg_width: 6.290256943227953
+avg_prominence: 2963.9029236203087
+total_peaks: 2265
+avg peaks per image: 226.5
+c1_max: 12358.4
+c2_max: 20163.15
+c3_max: 0
+total line scans: 5548
+name: tRNAs_MRPL23
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 700
+Peak Prominence Minimum: 200
+avg height: 1376.5755219047624
+avg_width: 10.052374365078078
+avg_prominence: 618.0303097142855
+total_peaks: 2625
+avg peaks per image: 291.6666666666667
+name: tRNAs_MRPL23
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 800
+avg height: 3560.824620626986
+avg_width: 6.491245126689448
+avg_prominence: 3161.0758605179462
+total_peaks: 2201
+avg peaks per image: 244.55555555555554
+c1_max: 3856.513
+c2_max: 19976.44
+c3_max: 0
+total line scans: 4154

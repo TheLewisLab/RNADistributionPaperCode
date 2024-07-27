@@ -1,0 +1,24 @@
+name: EU_GRSF1
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 800
+Peak Prominence Minimum: 400
+avg height: 1272.829686095932
+avg_width: 10.608811390752562
+avg_prominence: 721.3559028536733
+total_peaks: 1647
+avg peaks per image: 137.25
+name: EU_GRSF1
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 16106.544959424755
+avg_width: 7.541498202444501
+avg_prominence: 13663.76191987673
+total_peaks: 1947
+avg peaks per image: 162.25
+c1_max: 4991.158
+c2_max: 65535.0
+c3_max: 0
+total line scans: 5326

@@ -1,0 +1,27 @@
+<!--Created by Vision4D 4.1.2 tags/4.1.2-release^0@98c73da4661fb18d597af2e61196cc33ab6a833f-->
+<pipeline version="4.0" created="2024-02-13T23:48:56.7721627Z" modified="2024-05-15T14:15:30.2808186-07:00">
+  <operations>
+    <operation type-id="arivis.analysis.selection" id="arivis.analysis.selection1">
+      <outputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.0","p":null,"n":"MT633-T1","a":true},{"v":1,"id":"arivis.analysis.selection1.0.1","p":null,"n":"AF488-T2","a":true},{"v":1,"id":"arivis.analysis.selection1.0.2","p":null,"n":"AF405-T3","a":true}]},{"Channels":[]},{"ObjectTags":[]}]</outputs>
+      <settings>{"Document":"D:\\Adam Begeman\\Arivis Data\\RNA Distribution Paper\\SUV3-HA\\GRSF1\\SUV3HAtransfection_MTDR-647_GRSF1-488_HA-405-01-Airyscan Processing-Extended Depth of Focus.sis","ScopeID":"0","PixelSize":{"X":0.035295415669679642,"Y":0.035295415669679642,"Z":1.0},"PixelType":1,"ChannelCount":3,"Bounds":"0, 0, 1892, 1896","Channels":"1-3","Planes":"1","Frames":"1","SelectionHint":3,"Zoom":1.0,"ZoomXYOnly":false,"CropToBounds":false,"LegacyMode":false}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.volume.AnnotationMaskOperation" id="arivis.analysis.volume.AnnotationMaskOperation1" name="Object Mask">
+      <inputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.0"},{"v":1,"id":"arivis.analysis.selection1.0.1"},{"v":1,"id":"arivis.analysis.selection1.0.2"}]}]</inputs>
+      <outputs>[{"Channels":[{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.0","p":"arivis.analysis.selection1.0.0","n":"MT633-T1","a":true},{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.1","p":"arivis.analysis.selection1.0.1","n":"AF488-T2","a":true},{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.2","p":"arivis.analysis.selection1.0.2","n":"AF405-T3","a":true}]}]</outputs>
+      <settings OutputMode="1" OutputFile="" CreateNewChannels="False" NewChannelNamePattern="$o ($n)" version="V_3_3">{"Channels":[],"InvertMask":false,"UseChildren":true,"Tags":["SUV3 Expressing Mitos"]}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.voxelresult" id="arivis.analysis.voxelresult1">
+      <inputs>[{"Channels":[{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.0"},{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.1"},{"v":1,"id":"arivis.analysis.volume.AnnotationMaskOperation1.0.2"}]}]</inputs>
+      <outputs>[{"Channels":[{"v":1,"id":"arivis.analysis.voxelresult1.0.0","p":"arivis.analysis.volume.AnnotationMaskOperation1.0.0","n":"MT633-T1","a":true},{"v":1,"id":"arivis.analysis.voxelresult1.0.1","p":"arivis.analysis.volume.AnnotationMaskOperation1.0.1","n":"AF488-T2","a":true},{"v":1,"id":"arivis.analysis.voxelresult1.0.2","p":"arivis.analysis.volume.AnnotationMaskOperation1.0.2","n":"AF405-T3","a":true}]},{}]</outputs>
+      <settings mode="4" useForAnnotations="false" filename="D:\Adam Begeman\Arivis Data\RNA Distribution Paper\Masked Images\15minPulse_HPG-647_TOM20-488_dsDNA-405-01-Airyscan Processing-Extended Depth of Focus-Result Storages.sis" scopename="" autochannels="true" />
+    </operation>
+    <operation type-id="arivis.analysis.endOfPipeline" id="arivis.analysis.endOfPipeline1">
+      <settings />
+    </operation>
+  </operations>
+  <layout>
+    <entry name="_viewpartstates">arivis.analysis.voxelresult1=collapsed
+</entry>
+  </layout>
+  <features><![CDATA[{"Version":"3.1","Features":[]}]]></features>
+</pipeline>

@@ -1,0 +1,10 @@
+image set mean
+Channel_1    4611.612731
+Channel_2    5243.843169
+Channel_3    3138.445218
+dtype: float64
+image set std
+Channel_1    2076.834424
+Channel_2    5479.679401
+Channel_3    5077.078527
+dtype: float64

@@ -1,0 +1,72 @@
+name: ND4_HPG
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 300
+Peak Prominence Minimum: 200
+avg height: 845.4804931897372
+avg_width: 9.074289681913607
+avg_prominence: 632.3121963889771
+total_peaks: 3157
+avg peaks per image: 315.7
+name: ND4_HPG
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 200
+avg height: 1847.5420439276488
+avg_width: 8.701518755689953
+avg_prominence: 867.9485708010338
+total_peaks: 3870
+avg peaks per image: 387.0
+c1_max: 4138.66
+c2_max: 4826.95
+c3_max: 0
+total line scans: 5852
+name: RNR2_HPG
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 4000
+Peak Prominence Minimum: 2000
+avg height: 12187.202526594181
+avg_width: 10.420948998320766
+avg_prominence: 6534.425914781074
+total_peaks: 3403
+avg peaks per image: 340.3
+name: RNR2_HPG
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 200
+avg height: 1706.3210459032573
+avg_width: 8.75174657868211
+avg_prominence: 840.2890693484701
+total_peaks: 4052
+avg peaks per image: 405.2
+c1_max: 58391.982
+c2_max: 5812.61
+c3_max: 0
+total line scans: 6074
+name: tRNAs_HPG
+Channel: Channel_1
+Peak Width Minimum: 4
+Peak Height Minimum: 1500
+Peak Prominence Minimum: 700
+avg height: 3777.1642717541445
+avg_width: 11.456233438239929
+avg_prominence: 1724.1164761740329
+total_peaks: 2896
+avg peaks per image: 289.6
+name: tRNAs_HPG
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 1000
+Peak Prominence Minimum: 200
+avg height: 2391.223836134454
+avg_width: 8.671895540333603
+avg_prominence: 1014.1639310039806
+total_peaks: 4522
+avg peaks per image: 452.2
+c1_max: 22115.8
+c2_max: 7994.518
+c3_max: 0
+total line scans: 5844

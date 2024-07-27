@@ -1,0 +1,85 @@
+<!--Created by Vision4D 4.1.1 tags/4.1.1-release^0@7cc682bb5ff6655c792831bba295e22254077f83-->
+<pipeline version="4.0" created="2024-03-12T23:22:54.9366238Z" modified="2024-03-12T16:30:07.6911792-07:00">
+  <operations>
+    <operation type-id="arivis.analysis.selection" id="arivis.analysis.selection1">
+      <outputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.0","p":null,"n":"AF647-T1","a":true},{"v":1,"id":"arivis.analysis.selection1.0.1","p":null,"n":"AF488-T2","a":true},{"v":1,"id":"arivis.analysis.selection1.0.2","p":null,"n":"AF405-T3","a":true}]},{"Channels":[]},{"ObjectTags":[]}]</outputs>
+      <settings>{"Document":"D:\\Adam Begeman\\Arivis Data\\RNA Distribution Paper\\mtRNA\\MRPL23\\tRNAs-647_MRPL23-488_TOM20-405-02-Airyscan Processing-Extended Depth of Focus.sis","ScopeID":"0","PixelSize":{"X":0.035295415669679642,"Y":0.035295415669679642,"Z":1.0},"PixelType":1,"ChannelCount":3,"Bounds":"0, 0, 1892, 1896","Channels":"1-3","Planes":"1","Frames":"1","SelectionHint":3,"Zoom":1.0,"ZoomXYOnly":false,"CropToBounds":false,"LegacyMode":false}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.segmentation.IntensityThreshold" id="arivis.analysis.segmentation.IntensityThreshold1" name="Intensity Threshold Segmenter">
+      <inputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.0"}]}]</inputs>
+      <outputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold1.0.0","p":null,"n":"Mito Clean","a":true,"cm":2,"c":"Cyan"}]}]</outputs>
+      <settings labelerid="arivis.analysis.segmentation.intensity.threshold.Simple" object-name-pattern="$t #$I ($o)" version="1.0">
+        <strategy planewise="False">
+          <restrictor />
+          <preparer />
+        </strategy>
+        <labeler>{"Threshold":400.0,"Above":true,"Connectivity":1}</labeler>
+        <creator useholes="True" />
+        <merger>
+          <overlapping />
+          <validator />
+        </merger>
+        <filter>
+          <filter0>{"Threshold":20165.25,"FilterActive":false}</filter0>
+          <filter1>{"Active":false,"Size":{"LowerValue":0.012457663672954672,"UpperValue":44.688131127623,"Type":1}}</filter1>
+        </filter>
+        <publisher />
+      </settings>
+    </operation>
+    <operation type-id="arivis.analysis.segmentation.IntensityThreshold" id="arivis.analysis.segmentation.IntensityThreshold2" name="Intensity Threshold Segmenter 2">
+      <inputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.0"}]}]</inputs>
+      <outputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold2.0.0","p":null,"n":"tRNAs Thresholded","a":true,"cm":2,"c":"#D80000"}]}]</outputs>
+      <settings labelerid="arivis.analysis.segmentation.intensity.threshold.Simple" object-name-pattern="$t #$I ($o)" version="1.0">
+        <strategy planewise="False">
+          <restrictor />
+          <preparer />
+        </strategy>
+        <labeler>{"Threshold":1300.0,"Above":true,"Connectivity":1}</labeler>
+        <creator useholes="True" />
+        <merger>
+          <overlapping />
+          <validator />
+        </merger>
+        <filter>
+          <filter0>{"Threshold":20165.25,"FilterActive":false}</filter0>
+          <filter1>{"Active":false,"Size":{"LowerValue":0.012457663672954672,"UpperValue":44.688131127623,"Type":1}}</filter1>
+        </filter>
+        <publisher />
+      </settings>
+    </operation>
+    <operation type-id="arivis.analysis.segmentation.BlobFinder" id="arivis.analysis.segmentation.BlobFinder1" name="Blob Finder">
+      <inputs>[{"Channels":[{"v":1,"id":"arivis.analysis.selection1.0.1"}]}]</inputs>
+      <outputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.BlobFinder1.0.0","p":null,"n":"MRPL23","a":true,"cm":2,"c":"#C96EC9"}]}]</outputs>
+      <settings>{"Level":0.04,"Diameter":0.32,"Threshold":0.1,"Normalization":"FirstTimePointGlobal","Minimum":0.0,"Maximum":26887.0,"PerformPlaneWise":false,"Connectivity":"FullXY","AllowHoles":true,"ObjectNamePattern":"$t #$I ($o)","UseExponentialNormalization":true}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.volume.Compartmentalization" id="arivis.analysis.volume.Compartmentalization1" name="Compartments">
+      <inputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold1.0.0"},{"v":1,"id":"arivis.analysis.segmentation.BlobFinder1.0.0"},{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold2.0.0"}]}]</inputs>
+      <outputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.0","p":null,"n":"Compartments","a":true,"cm":0,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.1","p":null,"n":"MRPL23 in Mito Clean","a":true,"cm":4,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.2","p":null,"n":"Mito Clean with MRPL23","a":false,"cm":4,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.3","p":null,"n":"tRNAs Thresholded in Mito Clean","a":true,"cm":4,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.4","p":null,"n":"Mito Clean with tRNAs Thresholded","a":false,"cm":4,"c":"Cyan"}]}]</outputs>
+      <settings version="2.0">{"NodeLevels":[1,2,2],"NodeSettings":[{"ProvideAsFilteredOutputForParent":false,"FilteredOutputForParentName":" with Mito Clean","Modes":3,"Overlap":0.0,"MaximumDistance":0.0,"ProvideAsOutput":false,"OutputName":"Mito Clean","ProvideOverlapAsFeature":false,"ProvideDistanceAsFeature":false,"ProvideModeTags":false},{"ProvideAsFilteredOutputForParent":false,"FilteredOutputForParentName":"Mito Clean with MRPL23","Modes":3,"Overlap":0.6,"MaximumDistance":0.70000000000000007,"ProvideAsOutput":true,"OutputName":"MRPL23 in Mito Clean","ProvideOverlapAsFeature":false,"ProvideDistanceAsFeature":false,"ProvideModeTags":false},{"ProvideAsFilteredOutputForParent":false,"FilteredOutputForParentName":"Mito Clean with tRNAs Thresholded","Modes":3,"Overlap":0.6,"MaximumDistance":0.70000000000000007,"ProvideAsOutput":true,"OutputName":"tRNAs Thresholded in Mito Clean","ProvideOverlapAsFeature":false,"ProvideDistanceAsFeature":false,"ProvideModeTags":false}]}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.volume.Compartmentalization" id="arivis.analysis.volume.Compartmentalization2" name="Compartments 2">
+      <inputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.3"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.1"}]}]</inputs>
+      <outputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.volume.Compartmentalization2.0.0","p":null,"n":"Compartments 2","a":true,"cm":0,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization2.0.1","p":null,"n":"MRPL23 in Mito Clean in tRNAs Thresholded in Mito Clean","a":true,"cm":4,"c":"Cyan"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization2.0.2","p":null,"n":"tRNAs Thresholded in Mito Clean with MRPL23 in Mito Clean","a":false,"cm":4,"c":"Cyan"}]}]</outputs>
+      <settings version="2.0">{"NodeLevels":[1,2],"NodeSettings":[{"ProvideAsFilteredOutputForParent":false,"FilteredOutputForParentName":" with tRNAs Thresholded in Mito Clean","Modes":3,"Overlap":0.0,"MaximumDistance":0.0,"ProvideAsOutput":false,"OutputName":"tRNAs Thresholded in Mito Clean","ProvideOverlapAsFeature":false,"ProvideDistanceAsFeature":false,"ProvideModeTags":false},{"ProvideAsFilteredOutputForParent":false,"FilteredOutputForParentName":"tRNAs Thresholded in Mito Clean with MRPL23 in Mito Clean","Modes":3,"Overlap":0.6,"MaximumDistance":0.70000000000000007,"ProvideAsOutput":true,"OutputName":"MRPL23 in Mito Clean in tRNAs Thresholded in Mito Clean","ProvideOverlapAsFeature":false,"ProvideDistanceAsFeature":false,"ProvideModeTags":false}]}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.store.ExportAnnotation" id="arivis.analysis.store.ExportAnnotation1" name="Export Object Features">
+      <inputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold1.0.0"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.1"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.3"}]}]</inputs>
+      <settings version="3.1">{"File":"C:\\Users\\Lewis Lab\\Downloads\\RNR2-647_MRPL23-488_TOM20-405-03-Airyscan Processing-Extended Depth of Focus-objectfeatures.xlsx","Features":[{"FeatureId":"arivis.analysis.features.tags","ValueIndex":0},{"FeatureId":"arivis.analysis.features.name","ValueIndex":0},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":0},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":1},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":2},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":3},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":4},{"FeatureId":"arivis.analysis.features.intensities[0]","ValueIndex":5},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":0},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":1},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":2},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":3},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":4},{"FeatureId":"arivis.analysis.features.intensities[1]","ValueIndex":5},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":0},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":1},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":2},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":3},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":4},{"FeatureId":"arivis.analysis.features.intensities[2]","ValueIndex":5},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":0},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":1},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":2},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":3},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":4},{"FeatureId":"arivis.analysis.features.projected-properties","ValueIndex":5}],"Details":null,"Mode":0}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.store.StoreAnnotation" id="arivis.analysis.store.StoreAnnotation1">
+      <inputs>[{"ObjectTags":[{"v":1,"id":"arivis.analysis.segmentation.IntensityThreshold1.0.0"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.1"},{"v":1,"id":"arivis.analysis.volume.Compartmentalization1.0.3"}]}]</inputs>
+      <settings version="V_2_12_5">{"NamePattern":"$n","TagPattern":"$n","TagsToAdd":null,"TagsToDelete":["tRNAs Thresholded","MRPL23","Compartments","Compartments 2","MRPL23 in Mito Clean in tRNAs Thresholded in Mito Clean"],"PreserveAllTags":false,"KeepOnUndo":false}</settings>
+    </operation>
+    <operation type-id="arivis.analysis.endOfPipeline" id="arivis.analysis.endOfPipeline1">
+      <settings />
+    </operation>
+  </operations>
+  <layout>
+    <entry name="arivis.analysis.segmentation.IntensityThreshold1">{"Labeler.Threshold":{"pixeltype":"UInt16","minimum":"0","maximum":"26887"},"Filter.Core":{"pixeltype":"UInt16","minimum":"32767.5","maximum":"26887"}}</entry>
+    <entry name="arivis.analysis.store.StoreAnnotation1">["arivis.analysis.volume.Compartmentalization1"]</entry>
+    <entry name="arivis.analysis.segmentation.IntensityThreshold2">{"Labeler.Threshold":{"pixeltype":"UInt16","minimum":"0","maximum":"26887"},"Filter.Core":{"pixeltype":"UInt16","minimum":"32767.5","maximum":"26887"}}</entry>
+    <entry name="_viewpartstates">
+    </entry>
+  </layout>
+  <features><![CDATA[{"Version":"3.1","Features":[{"FactoryId":"arivis.analysis.features.intensities","Id":"arivis.analysis.features.intensities[0]","Name":"Intensities #1","Parameter":"{\"Channel\":0}"},{"FactoryId":"arivis.analysis.features.intensities","Id":"arivis.analysis.features.intensities[1]","Name":"Intensities #2","Parameter":"{\"Channel\":1}"},{"FactoryId":"arivis.analysis.features.intensities","Id":"arivis.analysis.features.intensities[2]","Name":"Intensities #3","Parameter":"{\"Channel\":2}"}]}]]></features>
+</pipeline>

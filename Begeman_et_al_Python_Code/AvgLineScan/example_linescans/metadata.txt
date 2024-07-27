@@ -1,0 +1,72 @@
+name: TFAM_DNA
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 1500
+avg height: 13297.32334365325
+avg_width: 7.918807504411547
+avg_prominence: 10552.918068111456
+total_peaks: 969
+avg peaks per image: 138.42857142857142
+name: TFAM_DNA
+Channel: Channel_3
+Peak Width Minimum: 2
+Peak Height Minimum: 4000
+Peak Prominence Minimum: 2000
+avg height: 14131.784528280545
+avg_width: 5.782657067085185
+avg_prominence: 13099.50664366516
+total_peaks: 884
+avg peaks per image: 126.28571428571429
+c1_max: 0
+c2_max: 34599.646
+c3_max: 33643.442
+total line scans: 1408
+name: TFAM_DNA
+Channel: Channel_2
+Peak Width Minimum: 4
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 1500
+avg height: 13297.32334365325
+avg_width: 7.918807504411547
+avg_prominence: 10552.918068111456
+total_peaks: 969
+avg peaks per image: 138.42857142857142
+name: TFAM_DNA
+Channel: Channel_3
+Peak Width Minimum: 2
+Peak Height Minimum: 4000
+Peak Prominence Minimum: 2000
+avg height: 14131.784528280545
+avg_width: 5.782657067085185
+avg_prominence: 13099.50664366516
+total_peaks: 884
+avg peaks per image: 126.28571428571429
+c1_max: 0
+c2_max: 34599.646
+c3_max: 33643.442
+total line scans: 1408
+name: New_GRSF1_DNA
+Channel: Channel_2
+Peak Width Minimum: 3
+Peak Height Minimum: 6000
+Peak Prominence Minimum: 4000
+avg height: 16452.561464261402
+avg_width: 7.419483153187804
+avg_prominence: 13976.514748808717
+total_peaks: 2938
+avg peaks per image: 293.8
+name: New_GRSF1_DNA
+Channel: Channel_3
+Peak Width Minimum: 3
+Peak Height Minimum: 5000
+Peak Prominence Minimum: 5000
+avg height: 17603.206646749142
+avg_width: 6.147772927105593
+avg_prominence: 16442.428601210846
+total_peaks: 3799
+avg peaks per image: 379.9
+c1_max: 0
+c2_max: 65535.0
+c3_max: 63338.739
+total line scans: 6732
